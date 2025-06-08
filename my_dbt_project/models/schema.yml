@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: data
+    columns:
+      - name: item_mrp
+        tests:
+          - not_null
