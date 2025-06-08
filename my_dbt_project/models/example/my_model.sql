@@ -1,3 +1,3 @@
 -- models/my_model.sql
-SELECT *
+SELECT count(*)
 FROM items
