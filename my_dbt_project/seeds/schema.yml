@@ -1,0 +1,19 @@
+version: 2
+
+seeds:
+  - name: items_info     # this should match the CSV file name (without .csv)
+    columns:
+      - name: item_id
+        tests:
+          - not_null
+          - unique
+
+      - name: item_mrp
+        tests:
+          - not_null
+
+      - name: item_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Food', 'Clothing', 'Electronics']   # example values
