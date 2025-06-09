@@ -36,3 +36,9 @@ models:
       +materialized: view
     stg:
       +materialized: table
+
+
+seeds:
+  my_dbt_project:  
+    +schema: public
+    +quote_columns: false

@@ -1,0 +1,7 @@
+item_id,item_type,item_mrp,store_id
+1,Food,55.0,101
+2,Clothing,899.0,102
+3,Electronics,1500.0,101
+4,Food,60.0,103
+5,Clothing,999.0,104
+6,Food,100.0,103
