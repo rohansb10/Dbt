@@ -26,12 +26,12 @@ analytics: contains all the sql files that will be used to create the analytics 
 
 
 ## Materialized 
-Type	            Use Case	                            Example
-View	            Lightweight,                            real-time data	Today’s orders
-Table	            Frequent queries,                       static data	Historical sales aggregates
-Incremental 	    Large,                                  append-only datasets	Daily log processing
-Ephemeral	        Reusable intermediate steps	Customer    preference calculation
-Materialized View	Auto-refreshed summaries	            Real-time revenue dashboard
+Type	               Use Case	                                 Example
+View	           --> Lightweight,                            --> real-time data	Today’s orders
+Table	           --> Frequent queries,                       --> static data	Historical sales aggregates
+Incremental 	   --> Large,                                  --> new added data show fastly 
+Ephemeral	       --> Reusable intermediate steps	Customer   --> preference calculation used cte sql function
+Materialized View  --> Auto-refreshed summaries	               --> Real-time revenue dashboard
 
 ## To run the project
 
