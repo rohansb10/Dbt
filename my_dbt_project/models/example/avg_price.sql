@@ -1,4 +1,4 @@
 -- models/example/avg_price.sql
 SELECT
-  AVG(item_mrp) AS average_price
-FROM {{ ref('items_info') }}  -- Correct reference to seed
+  AVG(item_weig) AS avg_weight  -- Corrected column name
+FROM items  -- Correct reference to seed

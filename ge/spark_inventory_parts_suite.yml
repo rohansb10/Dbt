@@ -1,0 +1,69 @@
+name: spark_inventory_parts_suite
+expectations:
+  - type: expect_column_to_exist
+    kwargs:
+      column: id
+  - type: expect_column_to_exist
+    kwargs:
+      column: name
+  - type: expect_column_to_exist
+    kwargs:
+      column: age
+  - type: expect_column_to_exist
+    kwargs:
+      column: gender
+  - type: expect_column_to_exist
+    kwargs:
+      column: salary
+  - type: expect_column_values_to_be_of_type
+    kwargs:
+      column: id
+      type_: int
+  - type: expect_column_values_to_be_of_type
+    kwargs:
+      column: name
+      type_: str
+  - type: expect_column_values_to_be_of_type
+    kwargs:
+      column: age
+      type_: int
+      mostly: 0.8  # Allow some nulls as in sample data
+  - type: expect_column_values_to_be_of_type
+    kwargs:
+      column: gender
+      type_: str
+  - type: expect_column_values_to_be_of_type
+    kwargs:
+      column: salary
+      type_: int
+      mostly: 0.8  # Allow some nulls as in sample data
+  - type: expect_column_values_to_be_in_set
+    kwargs:
+      column: gender
+      value_set: ["M", "F"]
+  - type: expect_column_values_to_be_between
+    kwargs:
+      column: age
+      min_value: 18
+      max_value: 65
+      mostly: 0.8  # Allow some outliers like age 17
+  - type: expect_column_values_to_be_between
+    kwargs:
+      column: salary
+      min_value: 25000
+      max_value: 100000
+      mostly: 0.8  # Allow some nulls or outliers
+  - type: expect_column_value_lengths_to_be_between
+    kwargs:
+      column: name
+      min_value: 1
+      max_value: 50
+  - type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id
+      min_value: 1.0  # All IDs should be unique
+      max_value: 1.0
+  - type: expect_table_row_count_to_be_between
+    kwargs:
+      min_value: 1
+      max_value: 100
